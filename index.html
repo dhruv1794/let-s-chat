@@ -52,13 +52,13 @@
                     $('#messages').append(`<h4>${message.name}</h4><p>${message.message}</p>`)
                 }
             function getMessages(){
-                $.get('http://localhost:3010/messages',(data)=>{
+                $.get('https://fierce-gorge-28082.herokuapp.com/message',(data)=>{
                     data.forEach(addMessage)
                     console.log(data)
                 })
             }
             function postMessage(message){
-                $.post('http://localhost:3010/messages',message)
+                $.post('https://fierce-gorge-28082.herokuapp.com/message',message)
                
             }
     </script>
