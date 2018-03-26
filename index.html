@@ -52,13 +52,13 @@
                     $('#messages').append(`<h4>${message.name}</h4><p>${message.message}</p>`)
                 }
             function getMessages(){
-                $.get('https://fierce-gorge-28082.herokuapp.com/message',(data)=>{
+                $.get('https://mysterious-taiga-90201.herokuapp.com/messages',(data)=>{
                     data.forEach(addMessage)
                     console.log(data)
                 })
             }
             function postMessage(message){
-                $.post('https://fierce-gorge-28082.herokuapp.com/message',message)
+                $.post('https://mysterious-taiga-90201.herokuapp.com/messages',message)
                
             }
     </script>
