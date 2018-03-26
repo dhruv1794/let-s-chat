@@ -3,6 +3,7 @@ var app = express();
 var http = require('http').Server(app);
 var IO = require('socket.io')(http);
 var mongoose = require('mongoose');
+var port = process.env.PORT || 5000;
 
 var DB_URL = 'mongodb://admin:password@ds221339.mlab.com:21339/mongo-chat'
 var bodyParser = require('body-parser')
@@ -48,6 +49,6 @@ mongoose.connect(DB_URL,(error)=>{
 //     console.log('App is listening to port', server.address().port)
 // })
 
-var server = http.listen(3010, ()=>{
-    console.log('App is listening to port', server.address().port)
+var server = http.listen(port, ()=>{
+    console.log('App is listening to port', port)
 })
